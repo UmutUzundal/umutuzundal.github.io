@@ -14,6 +14,36 @@
             padding: 60px 0;
             border-bottom: 1px solid #f0f0f0;
         }
+
+        /* Proje Hover Animasyonu */
+        .proje-linki {
+            position: relative;
+            display: inline-block;
+        }
+
+        .proje-linki .onizleme-gorseli {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 350px;
+            background-color: white;
+            padding: 5px;
+            border: 2px solid #343a40;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            z-index: 999;
+            transition: all 0.3s ease-in-out;
+            pointer-events: none; /* Görselin üzerine gelince titremeyi engeller */
+        }
+
+        .proje-linki:hover .onizleme-gorseli {
+            visibility: visible;
+            opacity: 1;
+            bottom: 130%;
+        }
     </style>
 </head>
 <body>
@@ -79,29 +109,117 @@
             <h2 class="text-center mb-5">Projeler & Topolojiler</h2>
             <div class="row">
                 <div class="col-12"><p class="text-center text-muted"><em>
-                    <a href="./media/konfs/Temel_Router_konf.pkt" download class="text-decoration-none">Temel router konfigürasyonu</a><br>
-                    <a href="./media/konfs/Temel_Switch_konf.pkt" download class="text-decoration-none">Temel Switch konfigürasyonu</a><br>
-                    <a href="./media/konfs/Switchport_konf.pkt" download class="text-decoration-none">Switch port konfigürasyonu</a><br>
-                    <a href="./media/konfs/Static_route_konf.pkt" download class="text-decoration-none">Statik Routing Konfigürasyonu</a><br>
-                    <a href="./media/konfs/vlan_routing.pkt" download class="text-decoration-none">Vlanlar arası Routing Konfigürasyonu</a><br>
-                    <a href="./media/konfs/ACL_konf.pkt" download class="text-decoration-none">ACL Konfigürasyonu</a><br>
-                    <a href="./media/konfs/VTP_konf.pkt" download class="text-decoration-none">VTP Konfigürasyonu</a><br>
-                    <a href="./media/konfs/Spanning_Tree_konf.pkt" download class="text-decoration-none">Spanning Tree Konfigürasyonu</a><br>
-                    <a href="./media/konfs/HSRP_konf.pkt" download class="text-decoration-none">HSRP Konfigürasyonu</a><br>
-                    <a href="./media/konfs/Etherchannel_konf.pkt" download class="text-decoration-none">Etherchannel Konfigürasyonu</a><br>
-                    <a href="./media/konfs/cisco_wlc.pkt" download class="text-decoration-none">Cisco Kablosuz Mimari ve Controller Konfigürasyonu</a><br>
-                    <a href="./media/konfs/Single_Area_OSPF_konf.pkt" download class="text-decoration-none">Single Area OSPF Konfigürasyonu</a><br>
-                    <a href="./media/konfs/ospfv3.pkt" download class="text-decoration-none">OSPFv3 Konfigürasyonu</a><br>
-                    <a href="./media/konfs/EIGRP_konf.pkt" download class="text-decoration-none">EIGRP Konfigürasyonu</a><br>
-                    <a href="./media/konfs/ebgp_konf.pkt" download class="text-decoration-none">eBGP Konfigürasyonu</a><br>
-                    <a href="./media/konfs/DHCP2_konf.pkt" download class="text-decoration-none">DHCP Konfigürasyonu (2)</a><br>
-                    <a href="./media/konfs/dhcp_konf3.pkt" download class="text-decoration-none">DHCP Konfigürasyonu (3)</a><br>
-                    <a href="./media/konfs/homerouter_konf.pkt" download class="text-decoration-none">Homerouter Konfigürasyonu</a><br>
-                    <a href="./media/konfs/Router_on_a_stick_konf.pkt" download class="text-decoration-none">Router On A Stick Konfigürasyonu</a><br>
-                    <a href="./media/konfs/wpa2_enterprise_konf.pkt" download class="text-decoration-none">WPA2 Konfigürasyonu</a><br><br>
                     
-                    <a href="./media/konfs/okul_network_proje.pkt" download class="text-decoration-none">Okul Network Mimari Projesi</a><br>
-                    <a href="./media/konfs/Topoloji_1.pkt" download class="text-decoration-none">Örnek Topoloji</a><br><br>  
+                    <a href="./media/konfs/Temel_Router_konf.pkt" download class="proje-linki text-decoration-none">
+                        Temel router konfigürasyonu
+                        <img src="./media/images/Temel_router.png" class="onizleme-gorseli" alt="Temel Router">
+                    </a><br>
+                    
+                    <a href="./media/konfs/Temel_Switch_konf.pkt" download class="proje-linki text-decoration-none">
+                        Temel Switch konfigürasyonu
+                        <img src="./media/images/temel_switch_gorsel.png" class="onizleme-gorseli" alt="Temel Switch">
+                    </a><br>
+                    
+                    <a href="./media/konfs/Switchport_konf.pkt" download class="proje-linki text-decoration-none">
+                        Switch port konfigürasyonu
+                        <img src="./media/images/switchport_gorsel.png" class="onizleme-gorseli" alt="Switchport">
+                    </a><br>
+                    
+                    <a href="./media/konfs/Static_route_konf.pkt" download class="proje-linki text-decoration-none">
+                        Statik Routing Konfigürasyonu
+                        <img src="./media/images/temel_routing.png" class="onizleme-gorseli" alt="Statik Routing">
+                    </a><br>
+                    
+                    <a href="./media/konfs/vlan_routing.pkt" download class="proje-linki text-decoration-none">
+                        Vlanlar arası Routing Konfigürasyonu
+                        <img src="./media/images/vlan_routing_gorsel.png" class="onizleme-gorseli" alt="VLAN Routing">
+                    </a><br>
+                    
+                    <a href="./media/konfs/ACL_konf.pkt" download class="proje-linki text-decoration-none">
+                        ACL Konfigürasyonu
+                        <img src="./media/images/ACL_konf.png" class="onizleme-gorseli" alt="ACL">
+                    </a><br>
+                    
+                    <a href="./media/konfs/VTP_konf.pkt" download class="proje-linki text-decoration-none">
+                        VTP Konfigürasyonu
+                        <img src="./media/images/VTP_konf.png" class="onizleme-gorseli" alt="VTP">
+                    </a><br>
+                    
+                    <a href="./media/konfs/Spanning_Tree_konf.pkt" download class="proje-linki text-decoration-none">
+                        Spanning Tree Konfigürasyonu
+                        <img src="./media/images/Spanning_tree.png" class="onizleme-gorseli" alt="Spanning Tree">
+                    </a><br>
+                    
+                    <a href="./media/konfs/HSRP_konf.pkt" download class="proje-linki text-decoration-none">
+                        HSRP Konfigürasyonu
+                        <img src="./media/images/HSRP_konf.png" class="onizleme-gorseli" alt="HSRP">
+                    </a><br>
+                    
+                    <a href="./media/konfs/Etherchannel_konf.pkt" download class="proje-linki text-decoration-none">
+                        Etherchannel Konfigürasyonu
+                        <img src="./media/images/Etherchannel_konf.png" class="onizleme-gorseli" alt="Etherchannel">
+                    </a><br>
+                    
+                    <a href="./media/konfs/wpa2_enterprise_konf.pkt" download class="proje-linki text-decoration-none">
+                        Cisco Kablosuz Mimari ve Controller Konfigürasyonu
+                        <img src="./media/images/wpa2_enterprise_konf.png" class="onizleme-gorseli" alt="Cisco WLC">
+                    </a><br>
+                    
+                    <a href="./media/konfs/Single_Area_OSPF_konf.pkt" download class="proje-linki text-decoration-none">
+                        Single Area OSPF Konfigürasyonu
+                        <img src="./media/images/Single_Area_OSPF_konf.png" class="onizleme-gorseli" alt="Single Area OSPF">
+                    </a><br>
+                    
+                    <a href="./media/konfs/ospfv3.pkt" download class="proje-linki text-decoration-none">
+                        OSPFv3 Konfigürasyonu
+                        <img src="./media/images/ospfv3_gorsel.png" class="onizleme-gorseli" alt="OSPFv3">
+                    </a><br>
+                    
+                    <a href="./media/konfs/EIGRP_konf.pkt" download class="proje-linki text-decoration-none">
+                        EIGRP Konfigürasyonu
+                        <img src="./media/images/EIGRP_konf.png" class="onizleme-gorseli" alt="EIGRP">
+                    </a><br>
+                    
+                    <a href="./media/konfs/DHCP_konf.pkt" download class="proje-linki text-decoration-none">
+                        DHCP Konfigürasyonu
+                        <img src="./media/images/DHCP_konf.png" class="onizleme-gorseli" alt="eBGP">
+                    </a><br>
+                    
+                    <a href="./media/konfs/DHCP2_konf.pkt" download class="proje-linki text-decoration-none">
+                        DHCP Konfigürasyonu (2)
+                        <img src="./media/images/DHCP2_konf.png" class="onizleme-gorseli" alt="DHCP 2">
+                    </a><br>
+                    
+                    <a href="./media/konfs/DHCP_konf3.pkt" download class="proje-linki text-decoration-none">
+                        DHCP Konfigürasyonu (3)
+                        <img src="./media/images/DHCP3_konf.png" class="onizleme-gorseli" alt="DHCP 3">
+                    </a><br>
+                    
+                    <a href="./media/konfs/homerouter_konf.pkt" download class="proje-linki text-decoration-none">
+                        Homerouter Konfigürasyonu
+                        <img src="./media/images/homerouter_konf.png" class="onizleme-gorseli" alt="Homerouter">
+                    </a><br>
+                    
+                    <a href="./media/konfs/Router_on_a_stick_konf.pkt" download class="proje-linki text-decoration-none">
+                        Router On A Stick Konfigürasyonu
+                        <img src="./media/images/Router_on_a_stick_konf.png" class="onizleme-gorseli" alt="Router on a Stick">
+                    </a><br>
+                    
+                    <a href="./media/konfs/wpa2_enterprise_konf.pkt" download class="proje-linki text-decoration-none">
+                        WPA2 Konfigürasyonu
+                        <img src="./media/images/wpa2_enterprise_konf.png" class="onizleme-gorseli" alt="WPA2 Enterprise">
+                    </a><br><br>
+                    
+                    <a href="./media/konfs/okul_network_proje.pkt" download class="proje-linki text-decoration-none">
+                        Okul Network Mimari Projesi
+                        <img src="./media/images/okul_proje.png" class="onizleme-gorseli" alt="Okul Network Projesi">
+                    </a><br>
+                    
+                    <a href="./media/konfs/Topoloji_1.pkt" download class="proje-linki text-decoration-none">
+                        Örnek Topoloji
+                        <img src="./media/images/Topoloji.png" class="onizleme-gorseli" alt="Örnek Topoloji">
+                    </a><br><br>  
+                    
                     <a href="./media/konfs/projeler.zip" download class="text-decoration-none">Hepsini yüklemek için tıklayınız.</a>
                 </em></p></div>
             </div>
@@ -121,7 +239,9 @@
                 </div>
             </div>
         </section>
-    </div> <footer id="iletisim" class="bg-dark text-white mt-4 py-3 w-100">
+    </div> 
+
+    <footer id="iletisim" class="bg-dark text-white mt-4 py-3 w-100">
         <div class="container-fluid px-5">
             <div class="row align-items-center">
                 <div class="col-md-5 mb-2 mb-md-0 d-flex align-items-center">
@@ -138,7 +258,7 @@
                     <p class="mb-0 text-muted mr-2 text-right" style="font-size: 0.75rem; line-height: 1.2;">
                         İçerikler <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="text-white" target="_blank">CC BY-NC-SA 4.0</a> ile lisanslıdır.
                     </p>
-                    </div>
+                </div>
             </div>
         </div>
     </footer>
