@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% comment %} <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="utf-8">
@@ -317,6 +317,634 @@
                 
                 // Her şey hazır olunca gizli Modal penceresini ekrana getiririz
                 $('#indirmeModal').modal('show');
+            });
+        });
+    </script>
+</body>
+</html> {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Umut Uzundal | Network & Systems Engineer</title>
+    <meta name="description" content="Umut Uzundal - Ağ ve Sistem Yönetimi Profesyonel Portfolyosu">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/png" href="./media/images/cv.png">
+    
+    <style>
+        /* KURUMSAL TASARIM DEĞİŞKENLERİ VE TEMEL AYARLAR */
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --slate-900: #0f172a;
+            --slate-700: #334155;
+            --slate-500: #64748b;
+            --bg-light: #f8FAFC;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--slate-700);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--slate-900);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        /* NAVBAR - Modern ve Temiz */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            padding: 1rem 2rem;
+        }
+        .navbar-brand {
+            color: var(--slate-900) !important;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        .nav-link {
+            color: var(--slate-500) !important;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        .nav-link:hover {
+            color: var(--primary) !important;
+        }
+
+        /* BÖLÜM AYARLARI */
+        section {
+            scroll-margin-top: 100px;
+            padding: 100px 0;
+            background-color: #ffffff;
+        }
+        section:nth-child(even) {
+            background-color: var(--bg-light);
+        }
+        .section-title {
+            font-size: 2.25rem;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 4px;
+            background-color: var(--primary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        /* HERO BÖLÜMÜ */
+        .hero-section {
+            padding: 140px 0 100px;
+            background: linear-gradient(135deg, #ffffff 0%, var(--bg-light) 100%);
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        .tech-pill {
+            background-color: #eff6ff;
+            color: var(--primary-dark);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin: 0.25rem;
+            border: 1px solid #bfdbfe;
+        }
+
+        /* YETENEKLER - Kart ve Badge Tasarımı */
+        .skill-card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            background: #ffffff;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+        .skill-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .badge-skill {
+            background-color: #f1f5f9;
+            color: var(--slate-700);
+            font-weight: 500;
+            padding: 0.4rem 0.8rem;
+            font-size: 0.85rem;
+            border-radius: 6px;
+            margin: 0.2rem;
+            display: inline-block;
+        }
+
+        /* PROJELER - Modern Izgara Kartları */
+        .project-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px -4px rgba(0,0,0,0.1);
+            border-color: #cbd5e1;
+        }
+        .project-card img {
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid #f1f5f9;
+            background-color: #f8fafc;
+            padding: 1rem;
+        }
+        .project-card .card-body {
+            padding: 1.5rem;
+        }
+        .project-card .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--slate-900);
+        }
+
+        /* EĞİTİM VE DENEYİM - CSS Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-left: 2rem;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #e2e8f0;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -35px;
+            top: 6px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid #eff6ff;
+            box-shadow: 0 0 0 3px #ffffff;
+        }
+        .timeline-date {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .timeline-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--slate-900);
+            margin-bottom: 0.25rem;
+        }
+        .timeline-subtitle {
+            color: var(--slate-500);
+            font-weight: 500;
+        }
+
+        /* BUTTONS & FOOTER */
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        .btn-outline-dark {
+            border-width: 2px;
+            font-weight: 600;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: var(--slate-900) !important;
+            border-top: 1px solid #1e293b;
+        }
+
+        /* SCROLL ANIMATIONS */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target="#navbarCollapse" data-offset="110">
+    
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/"><i class="fas fa-network-wired text-primary mr-2"></i>Umut Uzundal</a>
+            <button class="navbar-toggler text-dark" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#yetenekler">Uzmanlık</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projeler">Projeler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#deneyimler">Kariyer</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center reveal">
+                    <h1 class="hero-title mb-2">Umut Uzundal</h1>
+                    <h2 class="hero-subtitle">Network & Systems Engineer Candidate</h2>
+                    
+                    <div class="mb-4 mt-3">
+                        <span class="tech-pill"><i class="fas fa-server mr-1"></i> Windows Server</span>
+                        <span class="tech-pill"><i class="fas fa-project-diagram mr-1"></i> Cisco Routing & Switching</span>
+                        <span class="tech-pill"><i class="fab fa-python mr-1"></i> Python Automation</span>
+                        <span class="tech-pill"><i class="fas fa-shield-alt mr-1"></i> Network Security</span>
+                    </div>
+
+                    <p class="text-justify text-md-center lead text-muted mb-5" style="font-size: 1.15rem;">
+                        Teknolojiye olan merakım beni bilişim dünyasının derinliklerine taşıdı. Üniversite eğitimim boyunca edindiğim donanımlarla, asıl tutkumun <strong>karmaşık ağ mimarileri ve sistem altyapıları</strong> olduğunu keşfettim. Sürekli öğrenme felsefesiyle hareket ediyor; Cisco CCNA sertifikasyon süreçleri ve otomasyon üzerine yoğunlaşıyorum.
+                    </p>
+                    
+                    <div class="d-flex justify-content-center flex-wrap gap-3">
+                        <a href="./media/images/cv.png" target="_blank" class="btn btn-primary shadow-sm mx-2 mb-2">
+                            <i class="fas fa-file-alt mr-2"></i>Özgeçmişimi İncele
+                        </a>
+                        <a href="#projeler" class="btn btn-outline-dark mx-2 mb-2">
+                            <i class="fas fa-laptop-code mr-2"></i>Topolojileri Gör
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="yetenekler">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">Teknik Yetkinlikler</h2>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-lg-6 col-md-6 mb-4 reveal">
+                    <div class="card skill-card p-4">
+                        <i class="fas fa-route skill-icon"></i>
+                        <h4 class="mb-3">Yönlendirme & Anahtarlama</h4>
+                        <div>
+                            <span class="badge-skill">OSPF</span>
+                            <span class="badge-skill">EIGRP</span>
+                            <span class="badge-skill">Inter-VLAN Routing</span>
+                            <span class="badge-skill">Router on a Stick</span>
+                            <span class="badge-skill">Spanning Tree Protocol (STP)</span>
+                            <span class="badge-skill">EtherChannel</span>
+                            <span class="badge-skill">HSRP (İlk Atlama Yedekliliği)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 mb-4 reveal">
+                    <div class="card skill-card p-4">
+                        <i class="fas fa-network-wired skill-icon"></i>
+                        <h4 class="mb-3">Ağ Güvenliği & Servisleri</h4>
+                        <div>
+                            <span class="badge-skill">Erişim Kontrol Listeleri (ACL)</span>
+                            <span class="badge-skill">Trafik Filtreleme</span>
+                            <span class="badge-skill">Kablosuz Ağ Güvenliği</span>
+                            <span class="badge-skill">DHCP Yönetimi</span>
+                            <span class="badge-skill">NAT Konfigürasyonu</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 mb-4 reveal">
+                    <div class="card skill-card p-4">
+                        <i class="fas fa-terminal skill-icon"></i>
+                        <h4 class="mb-3">Sistem Yönetimi & Araçlar</h4>
+                        <div>
+                            <span class="badge-skill">Windows Server Yönetimi</span>
+                            <span class="badge-skill">Cisco IOS CLI</span>
+                            <span class="badge-skill">Python Ağ Otomasyonu</span>
+                            <span class="badge-skill">Algoritma Tasarımı</span>
+                            <span class="badge-skill">Microsoft Office</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 mb-4 reveal">
+                    <div class="card skill-card p-4">
+                        <i class="fas fa-code skill-icon"></i>
+                        <h4 class="mb-3">Yazılım & Geliştirme</h4>
+                        <div>
+                            <span class="badge-skill">Python</span>
+                            <span class="badge-skill">C</span>
+                            <span class="badge-skill">PHP</span>
+                            <span class="badge-skill">JavaScript</span>
+                            <span class="badge-skill">SQL</span>
+                            <span class="badge-skill">HTML / CSS</span>
+                            <span class="badge-skill">Dart</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projeler" class="bg-light">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">Projeler & Topolojiler</h2>
+                <p class="text-muted mb-5">Cisco Packet Tracer üzerinde tasarlanmış kurumsal ağ simülasyonları ve altyapı laboratuvarları.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/Temel_router.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Bekleniyor%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Temel Router">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Temel Router Konfigürasyonu</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/Temel_Router_konf.pkt" data-png-url="./media/images/Temel_router.png" data-isim="Temel router konfigürasyonu">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/temel_switch_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Bekleniyor%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Temel Switch">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Temel Switch Konfigürasyonu</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/Temel_Switch_konf.pkt" data-png-url="./media/images/temel_switch_konf.png" data-isim="Temel Switch konfigürasyonu">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/Switchport_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Bekleniyor%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Switchport">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Switchport Konfigürasyonu</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/Switchport_konf.pkt" data-png-url="./media/images/Switchport_konf.png" data-isim="Switchport konfigürasyonu">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/eksik1.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Bekleniyor%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Static Route">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Statik Routing</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/Static_route_konf.pkt" data-png-url="./media/images/eksik1.png" data-isim="Statik Routing Konfigürasyonu">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/Vlanlar_arasi_routing.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Bekleniyor%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="VLAN Routing">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">VLAN'lar Arası Routing</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/Vlanlar_arasi_routing_konf.pkt" data-png-url="./media/images/Vlanlar_arasi_routing.png" data-isim="Vlanlar arası Routing Konfigürasyonu">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/ACL_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Bekleniyor%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="ACL">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Erişim Kontrol Listesi (ACL)</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/ACL_konf.pkt" data-png-url="./media/images/ACL_konf.png" data-isim="ACL Konfigürasyonu">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/okul_proje.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Bekleniyor%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Okul Network Projesi">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Okul Network Mimari Projesi</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/okul_network_proje.pkt" data-png-url="./media/images/okul_proje.png" data-isim="Okul Network Mimari Projesi">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 mt-4 text-center reveal">
+                    <div class="p-4 rounded" style="border: 1px dashed #cbd5e1; background: #f8fafc;">
+                        <h5 class="mb-3 text-slate-700"><i class="fas fa-archive mr-2 text-primary"></i>Kapsamlı Arşiv</h5>
+                        <p class="text-muted small mb-3">VTP, Spanning Tree, HSRP, Etherchannel, OSPF, EIGRP, DHCP ve diğer tüm laboratuvar dosyalarını toplu olarak indirebilirsiniz.</p>
+                        <a href="./media/konfs/projeler.zip" download class="btn btn-primary px-4 shadow-sm">
+                            <i class="fas fa-download mr-2"></i>Tüm Proje Paketini İndir (.zip)
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="deneyimler">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title">Eğitim & Deneyim</h2>
+            </div>
+            
+            <div class="timeline mt-5 reveal">
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Ekim 2025 - Haziran 2026</div>
+                    <div class="timeline-title">Stajyer Bilişim Teknolojileri ve Yazılım Öğretmeni</div>
+                    <div class="timeline-subtitle">MEB Erenköy Fehmi Ekşioğlu Ortaokulu</div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Haziran 2025 - Ağustos 2025</div>
+                    <div class="timeline-title">Bilgi Teknolojileri (IT) Stajı</div>
+                    <div class="timeline-subtitle">TNC Group</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Ekim 2022 - Kasım 2023</div>
+                    <div class="timeline-title">Kargo Sortaj Operasyonları</div>
+                    <div class="timeline-subtitle">Trendyol Express, İstanbul</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2022 - 2026</div>
+                    <div class="timeline-title">Bilgisayar ve Öğretim Teknolojileri Eğitimi (BÖTE)</div>
+                    <div class="timeline-subtitle">Marmara Üniversitesi</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2018 - 2022</div>
+                    <div class="timeline-title">Lise Eğitimi</div>
+                    <div class="timeline-subtitle">İstanbul Maltepe Kadir Has Anadolu Lisesi</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="indirmeModal" tabindex="-1" aria-labelledby="indirmeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h5 class="modal-title font-weight-bold" id="indirmeModalLabel">Proje Dosyaları</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Kapat">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <p class="text-muted mb-4">Bu projeyi hangi formatta incelemek istersiniz?</p>
+                    <div class="d-flex flex-column flex-sm-row justify-content-center gap-2">
+                        <a href="#" id="buton-pkt" class="btn btn-primary m-1 shadow-sm" download>
+                            <i class="fas fa-network-wired mr-2"></i>.pkt (Paket) İndir
+                        </a>
+                        <a href="#" id="buton-png" class="btn btn-dark m-1 shadow-sm" download>
+                            <i class="fas fa-image mr-2"></i>.png (Görsel) İndir
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="iletisim" class="py-5 w-100 text-center text-md-left">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 mb-4 mb-md-0">
+                    <a href="mailto:umutderya58@gmail.com" class="text-white text-decoration-none d-block mb-2">
+                        <i class="fas fa-envelope mr-2 text-primary"></i>umutderya58@gmail.com
+                    </a>
+                    <div class="mt-3">
+                        <a href="https://github.com/UmutUzundal" target="_blank" class="text-white mr-4 text-decoration-none h5">
+                            <i class="fab fa-github hover-primary"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/umut-uzundal-61b12b253/" target="_blank" class="text-white text-decoration-none h5">
+                            <i class="fab fa-linkedin hover-primary"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-4 mb-md-0 text-center text-muted small">
+                    &copy; 2026 Umut Uzundal.<br>Tüm hakları saklıdır.
+                </div>
+
+                <div class="col-md-4 text-md-right text-muted small">
+                    İçerikler <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="text-white font-weight-bold" target="_blank">CC BY-NC-SA 4.0</a> ile lisanslıdır.
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            // Modal Tetikleyici Mantığı (Aynı Bırakıldı)
+            $('.proje-tetikleyici').on('click', function(e) {
+                e.preventDefault();
+                var pktLink = $(this).attr('data-pkt-url');
+                var pngLink = $(this).attr('data-png-url');
+                var projeIsmi = $(this).attr('data-isim');
+                
+                $('#indirmeModalLabel').text(projeIsmi);
+                $('#buton-pkt').attr('href', pktLink);
+                $('#buton-png').attr('href', pngLink);
+                
+                $('#indirmeModal').modal('show');
+            });
+
+            // Vanilla JS Scroll Animation (Intersection Observer)
+            const revealElements = document.querySelectorAll('.reveal');
+            
+            const revealOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                });
+            }, revealOptions);
+
+            revealElements.forEach(el => {
+                revealOnScroll.observe(el);
             });
         });
     </script>
