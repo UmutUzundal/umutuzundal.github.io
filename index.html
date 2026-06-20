@@ -167,13 +167,14 @@
             padding: 1rem;
         }
         .project-card .card-body {
-            padding: 1.5rem;
+            padding: 1.25rem;
         }
         .project-card .card-title {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
             margin-bottom: 1rem;
             color: var(--slate-900);
+            min-height: 48px; /* İki satırlık başlıkların düzeni bozmasını engeller */
         }
 
         /* EĞİTİM VE DENEYİM - CSS Timeline */
@@ -260,6 +261,12 @@
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
+        }
+        
+        /* SVG Görsel Bekleniyor Placehoder */
+        .placeholder-img {
+            object-fit: contain !important;
+            opacity: 0.5;
         }
     </style>
 </head>
@@ -387,13 +394,14 @@
         <div class="container">
             <div class="text-center reveal">
                 <h2 class="section-title">Projeler & Topolojiler</h2>
-                <p class="text-muted mb-5">Cisco Packet Tracer üzerinde tasarlanmış kurumsal ağ simülasyonları ve altyapı laboratuvarları.</p>
+                <p class="text-muted mb-5">Cisco Packet Tracer üzerinde tasarlanmış tüm kurumsal ağ simülasyonları ve laboratuvar çalışmaları.</p>
             </div>
             
             <div class="row">
+                
                 <div class="col-lg-4 col-md-6 mb-4 reveal">
                     <div class="card project-card h-100">
-                        <img src="./media/images/Temel_router.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Bekleniyor%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Temel Router">
+                        <img src="./media/images/Temel_router.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Temel Router">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Temel Router Konfigürasyonu</h5>
                             <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/Temel_Router_konf.pkt" data-png-url="./media/images/Temel_router.png" data-isim="Temel router konfigürasyonu">
@@ -405,7 +413,7 @@
 
                 <div class="col-lg-4 col-md-6 mb-4 reveal">
                     <div class="card project-card h-100">
-                        <img src="./media/images/temel_switch_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Bekleniyor%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Temel Switch">
+                        <img src="./media/images/temel_switch_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Temel Switch">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Temel Switch Konfigürasyonu</h5>
                             <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/Temel_Switch_konf.pkt" data-png-url="./media/images/temel_switch_konf.png" data-isim="Temel Switch konfigürasyonu">
@@ -417,7 +425,7 @@
 
                 <div class="col-lg-4 col-md-6 mb-4 reveal">
                     <div class="card project-card h-100">
-                        <img src="./media/images/Switchport_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Bekleniyor%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Switchport">
+                        <img src="./media/images/Switchport_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Switchport">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Switchport Konfigürasyonu</h5>
                             <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/Switchport_konf.pkt" data-png-url="./media/images/Switchport_konf.png" data-isim="Switchport konfigürasyonu">
@@ -429,7 +437,7 @@
                 
                 <div class="col-lg-4 col-md-6 mb-4 reveal">
                     <div class="card project-card h-100">
-                        <img src="./media/images/eksik1.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Bekleniyor%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Static Route">
+                        <img src="./media/images/eksik1.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Static Route">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Statik Routing</h5>
                             <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/Static_route_konf.pkt" data-png-url="./media/images/eksik1.png" data-isim="Statik Routing Konfigürasyonu">
@@ -441,7 +449,7 @@
 
                 <div class="col-lg-4 col-md-6 mb-4 reveal">
                     <div class="card project-card h-100">
-                        <img src="./media/images/Vlanlar_arasi_routing.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Bekleniyor%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="VLAN Routing">
+                        <img src="./media/images/Vlanlar_arasi_routing.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="VLAN Routing">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">VLAN'lar Arası Routing</h5>
                             <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/Vlanlar_arasi_routing_konf.pkt" data-png-url="./media/images/Vlanlar_arasi_routing.png" data-isim="Vlanlar arası Routing Konfigürasyonu">
@@ -453,7 +461,7 @@
 
                 <div class="col-lg-4 col-md-6 mb-4 reveal">
                     <div class="card project-card h-100">
-                        <img src="./media/images/ACL_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Bekleniyor%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="ACL">
+                        <img src="./media/images/ACL_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="ACL">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Erişim Kontrol Listesi (ACL)</h5>
                             <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/ACL_konf.pkt" data-png-url="./media/images/ACL_konf.png" data-isim="ACL Konfigürasyonu">
@@ -465,7 +473,175 @@
                 
                 <div class="col-lg-4 col-md-6 mb-4 reveal">
                     <div class="card project-card h-100">
-                        <img src="./media/images/okul_proje.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Bekleniyor%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Okul Network Projesi">
+                        <img src="./media/images/VTP_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="VTP">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">VTP Konfigürasyonu</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/VTP_konf.pkt" data-png-url="./media/images/VTP_konf.png" data-isim="VTP Konfigürasyonu">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/Spanning_tree.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Spanning Tree">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Spanning Tree Konfigürasyonu</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/Spanning_Tree_konf.pkt" data-png-url="./media/images/Spanning_tree.png" data-isim="Spanning Tree Konfigürasyonu">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/HSRP_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="HSRP">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">HSRP Konfigürasyonu</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/HSRP_konf.pkt" data-png-url="./media/images/HSRP_konf.png" data-isim="HSRP Konfigürasyonu">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/Etherchannel_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Etherchannel">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Etherchannel Konfigürasyonu</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/Etherchannel_konf.pkt" data-png-url="./media/images/Etherchannel_konf.png" data-isim="Etherchannel Konfigürasyonu">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/wpa2_enterprise_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Cisco WLC">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Cisco Kablosuz Mimari ve WLC</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/wpa2_enterprise_konf.pkt" data-png-url="./media/images/wpa2_enterprise_konf.png" data-isim="Cisco Kablosuz Mimari Konfigürasyonu">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/Single_area_OSPF_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Single Area OSPF">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Single Area OSPF Konfigürasyonu</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/Single_Area_OSPF_konf.pkt" data-png-url="./media/images/Single_area_OSPF_konf.png" data-isim="Single Area OSPF Konfigürasyonu">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/ospfv3_gorsel.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="OSPFv3">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">OSPFv3 Konfigürasyonu</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/ospfv3.pkt" data-png-url="./media/images/ospfv3_gorsel.png" data-isim="OSPFv3 Konfigürasyonu">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/EIGRP_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="EIGRP">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">EIGRP Konfigürasyonu</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/EIGRP_konf.pkt" data-png-url="./media/images/EIGRP_konf.png" data-isim="EIGRP Konfigürasyonu">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/DHCP_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="DHCP">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">DHCP Konfigürasyonu</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/DHCP_konf.pkt" data-png-url="./media/images/DHCP_konf.png" data-isim="DHCP Konfigürasyonu">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/DHCP2_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="DHCP 2">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">DHCP Konfigürasyonu (2)</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/DHCP2_konf.pkt" data-png-url="./media/images/DHCP2_konf.png" data-isim="DHCP Konfigürasyonu (2)">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/DHCP_konf3.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="DHCP 3">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">DHCP Konfigürasyonu (3)</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/DHCP_konf3.pkt" data-png-url="./media/images/DHCP_konf3.png" data-isim="DHCP Konfigürasyonu (3)">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/homerouter_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Homerouter">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Homerouter Konfigürasyonu</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/homerouter_konf.pkt" data-png-url="./media/images/homerouter_konf.png" data-isim="Homerouter Konfigürasyonu">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/Router_on_a_stick_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Router on a Stick">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Router On A Stick Konfigürasyonu</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/Router_on_a_stick_konf.pkt" data-png-url="./media/images/Router_on_a_stick_konf.png" data-isim="Router On A Stick Konfigürasyonu">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/wpa2_enterprise_konf.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="WPA2 Enterprise">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">WPA2 Konfigürasyonu</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/wpa2_enterprise_konf.pkt" data-png-url="./media/images/wpa2_enterprise_konf.png" data-isim="WPA2 Konfigürasyonu">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/okul_proje.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Okul Network Projesi">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Okul Network Mimari Projesi</h5>
                             <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/okul_network_proje.pkt" data-png-url="./media/images/okul_proje.png" data-isim="Okul Network Mimari Projesi">
@@ -475,10 +651,34 @@
                     </div>
                 </div>
                 
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/Topoloji.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Örnek Topoloji">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Örnek Topoloji</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/Topoloji_1.pkt" data-png-url="./media/images/Topoloji.png" data-isim="Örnek Topoloji">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 reveal">
+                    <div class="card project-card h-100">
+                        <img src="./media/images/Topoloji2.png" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e2e8f0%22%20%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%2394a3b8%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%3EG%C3%B6rsel%20Eksik%3C%2Ftext%3E%3C%2Fsvg%3E'" alt="Örnek Topoloji 2">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Örnek Topoloji 2</h5>
+                            <button class="btn btn-outline-primary btn-block mt-auto proje-tetikleyici" data-pkt-url="./media/konfs/Topoloji2.pkt" data-png-url="./media/images/Topoloji2.png" data-isim="Örnek Topoloji 2">
+                                <i class="fas fa-eye mr-1"></i> İncele / İndir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="col-12 mt-4 text-center reveal">
                     <div class="p-4 rounded" style="border: 1px dashed #cbd5e1; background: #f8fafc;">
                         <h5 class="mb-3 text-slate-700"><i class="fas fa-archive mr-2 text-primary"></i>Kapsamlı Arşiv</h5>
-                        <p class="text-muted small mb-3">VTP, Spanning Tree, HSRP, Etherchannel, OSPF, EIGRP, DHCP ve diğer tüm laboratuvar dosyalarını toplu olarak indirebilirsiniz.</p>
+                        <p class="text-muted small mb-3">Tüm topoloji laboratuvarlarını toplu paket olarak cihazınıza indirebilirsiniz.</p>
                         <a href="./media/konfs/projeler.zip" download class="btn btn-primary px-4 shadow-sm">
                             <i class="fas fa-download mr-2"></i>Tüm Proje Paketini İndir (.zip)
                         </a>
@@ -496,7 +696,6 @@
             </div>
             
             <div class="timeline mt-5 reveal">
-                
                 <div class="timeline-item">
                     <div class="timeline-date">Ekim 2025 - Haziran 2026</div>
                     <div class="timeline-title">Stajyer Bilişim Teknolojileri ve Yazılım Öğretmeni</div>
@@ -526,7 +725,6 @@
                     <div class="timeline-title">Lise Eğitimi</div>
                     <div class="timeline-subtitle">İstanbul Maltepe Kadir Has Anadolu Lisesi</div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -588,7 +786,6 @@
     
     <script>
         $(document).ready(function() {
-            // Modal Tetikleyici Mantığı (Aynı Bırakıldı)
             $('.proje-tetikleyici').on('click', function(e) {
                 e.preventDefault();
                 var pktLink = $(this).attr('data-pkt-url');
